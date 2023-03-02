@@ -5,11 +5,13 @@
 }
 
 <div><h2>Todos os Lanches</h2></div>
+<hr />
 
 @foreach(var lanche in Model)
 {
     <div>
-        <h4>Lanche: @lanche.Nome</h4>
-        <p><img src="" /></p>
+        <h4>@lanche.Nome</h4>
+        <p><img src="img/@lanche.ImagemUrl"/></p>
+        <p>@lanche.Preco.ToString("c")</p>
     </div>
 }
